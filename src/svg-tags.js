@@ -1,14 +1,18 @@
 
-// NOTE: Tags in this file are pulled from MDN's SVG element reference.
-// https://developer.mozilla.org/en-US/docs/Web/SVG/Element
-
-// NOTE: The `<switch>` SVG element has been disabled because `switch` is a
-// keyword in JavaScript. Use `h('switch')` as a workaround.
-// https://developer.mozilla.org/en-US/docs/Web/SVG/Element/switch
-
-// NOTE: /* @__PURE__ */ annotations inform tools like ESBuild, Rollup, and
-// Uglify that these function calls do not produce side effects and can safely
-// be removed when unused.
+/**
+ *
+ * NOTES
+ *
+ * Tags in this file were copied from MDN's SVG element reference.
+ * https://developer.mozilla.org/en-US/docs/Web/SVG/Element
+ *
+ * The <switch> SVG element has been removed because "switch" is a keyword
+ * in JavaScript. Use h('switch') as a workaround.
+ *
+ * Pure annotations inform tools like ESBuild, Rollup, and Uglify that these
+ * function calls do not produce side effects and can be removed when unused.
+ *
+ */
 
 import { h } from './virtual-nodes'
 

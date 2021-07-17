@@ -6,7 +6,9 @@ const EMPTY_OBJ = {}
 
 /**
  *
- * Virtual nodes derived from:
+ * NOTES
+ *
+ * Virtual node functions derived from:
  * https://github.com/jorgebucaran/superfine/blob/main/index.js
  *
  */
@@ -24,12 +26,6 @@ const virtualText = value => ({
   children: EMPTY_ARR,
   type: 3
 })
-
-/**
- *
- * Hyperscript functions with static rendering.
- *
- */
 
 export const node = process.env.STATIC ? renderNode : virtualNode
 export const text = process.env.STATIC ? renderText : virtualText

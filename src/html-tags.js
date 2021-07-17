@@ -1,10 +1,15 @@
 
-// NOTE: Tags in this file are pulled from the WHATWG HTML Living Standard.
-// https://html.spec.whatwg.org/multipage/indices.html
-
-// NOTE: /* @__PURE__ */ annotations inform tools like ESBuild, Rollup, and
-// Uglify that these function calls do not produce side effects and can safely
-// be removed when unused.
+/**
+ *
+ * NOTES
+ *
+ * Tags in this file were copied from the WHATWG HTML Living Standard.
+ * https://html.spec.whatwg.org/multipage/indices.html
+ *
+ * Pure annotations inform tools like ESBuild, Rollup, and Uglify that these
+ * function calls do not produce side effects and can be removed when unused.
+ *
+ */
 
 import { h } from './virtual-nodes'
 

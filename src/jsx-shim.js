@@ -3,7 +3,9 @@ import { node, text } from './virtual-nodes'
 
 /**
  *
- * JSX pragma derived from:
+ * NOTES
+ *
+ * JSX shim function derived from:
  * https://github.com/zaceno/hyperapp-jsx-pragma/blob/main/index.js
  *
  * Learn how to setup JSX with esbuild here:

@@ -1,11 +1,17 @@
 
-// Function derived from:
-// https://github.com/component/escape-html/blob/master/index.js
+/**
+ *
+ * NOTES
+ *
+ * Escape HTML function derived from:
+ * https://github.com/component/escape-html/blob/master/index.js
+ *
+ */
 
 const matchHtmlRegExp = /["'&<>]/
 
-function escapeHtml (string) {
-  const str = '' + string
+export default string => {
+  const str = string + ''
   const match = matchHtmlRegExp.exec(str)
 
   if (!match) {
@@ -39,5 +45,3 @@ function escapeHtml (string) {
     ? html + str.substring(lastIndex, index)
     : html
 }
-
-export default escapeHtml
