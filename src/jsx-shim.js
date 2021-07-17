@@ -1,6 +1,8 @@
 
 import { node, text } from './virtual-nodes'
 
+const FF_STATIC_RENDER = process.env.FF_STATIC_RENDER ?? false
+
 /**
  *
  * NOTES
@@ -20,7 +22,7 @@ export const jsx = (type, props, ...children) => {
     return type(props, children.flat(Infinity))
   }
 
-  if (process.env.STATIC) {
+  if (FF_STATIC_RENDER) {
     for (let i = 0; i < children.length; i++) {
       const child = children[i]
 
