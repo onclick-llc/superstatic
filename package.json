@@ -1,7 +1,7 @@
 {
-  "name": "supertools",
+  "name": "superstatic",
   "version": "0.0.0",
-  "description": "Helper functions for Superfine, the view library.",
+  "description": "Render JSX, h functions, or HTML functions, as Superfine vnodes or statically as strings.",
   "license": "MIT",
   "author": "Dustin Dowell",
   "main": "index.js",
