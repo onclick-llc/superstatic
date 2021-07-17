@@ -1,4 +1,4 @@
 
-# supertools
+# superstatic
 
-Helper functions for Superfine, the view library.
+Render JSX, h functions, or HTML functions, as Superfine vnodes or statically as strings.
