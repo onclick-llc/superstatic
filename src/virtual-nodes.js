@@ -1,8 +1,7 @@
 
 import { renderNode, renderText } from './static-render'
 
-const EMPTY_ARR = []
-const EMPTY_OBJ = {}
+const FF_STATIC_RENDER = process.env.FF_STATIC_RENDER ?? false
 
 /**
  *
@@ -12,6 +11,9 @@ const EMPTY_OBJ = {}
  * https://github.com/jorgebucaran/superfine/blob/main/index.js
  *
  */
+
+const EMPTY_ARR = []
+const EMPTY_OBJ = {}
 
 const virtualNode = (tag, props, children) => ({
   tag,
@@ -27,11 +29,11 @@ const virtualText = value => ({
   type: 3
 })
 
-export const node = process.env.STATIC ? renderNode : virtualNode
-export const text = process.env.STATIC ? renderText : virtualText
+export const node = FF_STATIC_RENDER ? renderNode : virtualNode
+export const text = FF_STATIC_RENDER ? renderText : virtualText
 
 export const h = type => (props, children) => {
-  const staticProps = process.env.STATIC && typeof props === 'string'
+  const staticProps = FF_STATIC_RENDER && typeof props === 'string'
 
   return Array.isArray(props) || props == null || staticProps
     ? node(type, EMPTY_OBJ, props)
