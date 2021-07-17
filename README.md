@@ -1,4 +1,4 @@
 
 # superstatic
 
-Render JSX, h functions, or HTML functions, as Superfine vnodes or statically as strings.
+Render JSX or hyperscript as Superfine vnodes or statically as strings.
