@@ -1,5 +1,5 @@
 {
-  "name": "superstatic",
+  "name": "@onclick/superstatic",
   "version": "0.0.0",
   "description": "Render JSX or hyperscript as Superfine vnodes or statically as strings.",
   "license": "MIT",
