@@ -15,11 +15,25 @@ const FF_STATIC_RENDER = process.env.FF_STATIC_RENDER ?? false
  *
  */
 
+const flatten = (children, target = []) => {
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i]
+
+    if (Array.isArray(child)) {
+      flatten(child, target)
+    } else {
+      target.push(child)
+    }
+  }
+
+  return target
+}
+
 export const jsx = (type, props, ...children) => {
   props ??= {}
 
   if (typeof type === 'function') {
-    return type(props, children.flat(Infinity))
+    return type(props, flatten(children))
   }
 
   if (FF_STATIC_RENDER) {
@@ -36,7 +50,7 @@ export const jsx = (type, props, ...children) => {
     ]
   }
 
-  children = children.flat(Infinity)
+  children = flatten(children)
 
   for (let i = 0; i < children.length; i++) {
     const child = children[i]
