@@ -30,7 +30,8 @@ const flatten = (children, target = []) => {
 }
 
 export const jsx = (type, props, ...children) => {
-  props ??= {}
+  // props ??= {} // Only works on node v16.x
+  props = props == null ? {} : props
 
   if (typeof type === 'function') {
     return type(props, flatten(children))
